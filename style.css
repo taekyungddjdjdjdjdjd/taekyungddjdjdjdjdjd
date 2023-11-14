@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(100, 100, 98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first{
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color:rgb(50, 122, 116);
+    margin-bottom: 50px;
+    border-radius: 20px;
+
+}
+
+
+.menu, .menu::before, .menu::after{
+    position: absolute;
+    width: 90px;
+    height: 21px;
+    background-color: rgb(247, 243, 223);
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-left: 93%;
+}
+
+.menu::before, .menu::after{
+    margin-left: -0.5%;
+    content: "";
+}
+
+.menu::before{
+    top: -150%;
+}
+
+.menu::after{
+    top: 150%;
+}
+.toggle:checked ~ .menu::after{
+    top:0;
+    transform: rotate(225deg);
+}
+
+.toggle:checked ~ .menu::before{
+    top:0;
+    transform: rotate(135deg);
+
+}
+
+.toggle:checked ~ .menu{
+    background: rgb(50, 122, 116);
+}
+
+.toggle{
+    opacity: 0%;
+}
+
+.container{
+    margin-top: 50px;
+    background-color:rgb(85, 106, 131);
+    max-width: 360px;
+    height: 650px;
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0px 16px 32px rgba(82, 34, 34, 0.5)
+
+}
+.main{
+background-image: url("qe.jpg");
+background-size: 360px;
+width: 360px;
+height: 250px;
+display: flex;
+justify-content: center;
+
+}
+.profile{
+margin-top: 100px;
+width: 200px;
+height: 200px;
+border-radius: 100px;
+transition: transform 200ms;
+}
+.profile:hover{
+    transform:  scale(1.2);
+}
+.name{
+    margin-top: 60px;
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.follow{
+    margin-top: -10px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(103, 110, 204);
+    border-radius: 50px;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    }
+ .follow:active{
+    transform: scale(1.1);
+ }
+ .c{
+    font-size: 25px;
+    width: 1000xp;
+    height: 200px;
+    margin: 20px;
+    overflow: auto;
+    text-align: center;
+    margin-top: 1%;
+ }  
